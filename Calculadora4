@@ -1,0 +1,47 @@
+package como_estou_em_java;
+
+import java.util.Scanner;
+
+public class Calculadora4 {
+
+	static Scanner input = new Scanner(System.in);
+
+	double valor1, valor2;
+
+	public double soma() {
+
+		return valor1 + valor2;
+
+	}
+
+	public double subtrair() {
+
+		return valor1 - valor2;
+
+	}
+
+	public double multiplicar() {
+
+		return valor1 * valor2;
+
+	}
+
+	public double dividir() {
+
+		return valor1 / valor2;
+
+	}
+
+	public double restoDivicao () {
+
+		return  (valor1 % valor2);
+
+	}
+
+	public void pegaValores () {
+		valor1 = input.nextDouble();
+		valor2 = input.nextDouble(); 
+
+	}
+
+}
