@@ -1,0 +1,89 @@
+package como_estou_em_java;
+
+import java.util.Scanner;
+
+public class Atividade04 {
+
+	static //4)Crie uma classe java em que o usuário informe dois números e a operação que deve executar e apresente o resultado.
+	Scanner input = new Scanner(System.in); 
+
+
+	public static void main(String[] args) {
+		
+		Calculadora4 calc = new Calculadora4();
+
+		System.out.println("Informa a operação");
+
+		System.out.println("[+] para somar");
+
+		System.out.println("[-] para subtrair");
+
+		System.out.println("[*] para multiplicar");
+
+		System.out.println("[/] para dividir");
+		
+		System.out.println("[%] para o resto da divisão");
+
+		String operacao = input.nextLine();
+
+		switch (operacao) {
+
+		case "+":
+
+			System.out.println("Digite os dois valores a serem somados");
+
+			calc.pegaValores();
+
+			System.out.println(calc.soma());
+
+			break;
+
+		case "-":
+
+			System.out.println("Digite os dois valores a serem subtraidos");
+			
+			calc.pegaValores();
+
+			System.out.println(calc.subtrair());
+
+			break;
+
+		case "*":
+
+			System.out.println("Digite os dois valores a serem multiplicados");
+
+			calc.pegaValores();
+
+			System.out.println(calc.multiplicar());
+
+			break;
+
+		case "/":
+
+			System.out.println("Digite os dois valores a serem divididos");
+
+			calc.pegaValores();
+
+			System.out.println(calc.dividir());
+
+			break;
+			
+		case "%":
+			
+			System.out.println("Digite os dois valores a serem divididos");
+			
+				calc.pegaValores();
+				
+				System.out.println(calc.restoDivicao());
+				break; 
+
+		default:
+
+			System.out.println("Operação Inválida");
+
+			break;
+
+		}
+
+	}
+
